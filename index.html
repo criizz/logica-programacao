@@ -3,102 +3,114 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Lógica de Programação para Iniciantes</title>
 
 <style>
 
 *{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:Arial, sans-serif;
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
 }
 
 body{
-background:#f5f7fa;
-line-height:1.6;
+    font-family:Arial, sans-serif;
+    background:#f4f7fb;
+    color:#333;
+    line-height:1.6;
 }
 
 header{
-background:#1e3a8a;
-color:white;
-padding:40px;
-text-align:center;
+    background:#1e3a8a;
+    color:white;
+    text-align:center;
+    padding:50px 20px;
+}
+
+header h1{
+    margin-bottom:10px;
 }
 
 nav{
-background:#172554;
-padding:15px;
-text-align:center;
-position:sticky;
-top:0;
+    background:#172554;
+    text-align:center;
+    padding:15px;
+    position:sticky;
+    top:0;
+    z-index:100;
 }
 
 nav a{
-color:white;
-text-decoration:none;
-margin:0 15px;
-font-weight:bold;
+    color:white;
+    text-decoration:none;
+    margin:10px;
+    font-weight:bold;
+}
+
+nav a:hover{
+    color:#93c5fd;
 }
 
 section{
-max-width:1000px;
-margin:auto;
-padding:40px 20px;
+    max-width:1000px;
+    margin:auto;
+    padding:30px 20px;
 }
 
 .card{
-background:white;
-padding:25px;
-margin-bottom:25px;
-border-radius:10px;
-box-shadow:0 2px 8px rgba(0,0,0,0.1);
+    background:white;
+    padding:25px;
+    margin-bottom:25px;
+    border-radius:12px;
+    box-shadow:0 2px 8px rgba(0,0,0,0.1);
 }
 
 h2{
-color:#1e3a8a;
-margin-bottom:15px;
+    color:#1e3a8a;
+    margin-bottom:15px;
 }
 
 code{
-display:block;
-background:#eee;
-padding:10px;
-margin-top:10px;
-border-radius:5px;
-}
-
-.quiz{
-background:white;
-padding:20px;
-border-radius:10px;
+    display:block;
+    background:#eee;
+    padding:15px;
+    border-radius:8px;
+    margin-top:10px;
 }
 
 button{
-background:#2563eb;
-color:white;
-border:none;
-padding:10px 20px;
-border-radius:5px;
-cursor:pointer;
-margin-top:15px;
+    background:#2563eb;
+    color:white;
+    border:none;
+    padding:10px 20px;
+    border-radius:5px;
+    cursor:pointer;
+    margin-top:10px;
 }
 
 button:hover{
-opacity:0.9;
+    background:#1d4ed8;
+}
+
+input, select, textarea{
+    width:100%;
+    padding:10px;
+    margin-top:5px;
+    border:1px solid #ccc;
+    border-radius:5px;
 }
 
 footer{
-background:#1e3a8a;
-color:white;
-text-align:center;
-padding:20px;
-margin-top:30px;
+    background:#1e3a8a;
+    color:white;
+    text-align:center;
+    padding:20px;
 }
 
-#resultado{
-font-weight:bold;
-margin-top:15px;
+.resultado{
+    margin-top:10px;
+    font-weight:bold;
 }
 
 </style>
@@ -107,33 +119,37 @@ margin-top:15px;
 <body>
 
 <header>
-<h1>Aprenda Lógica de Programação</h1>
-<p>Projeto Educativo Gratuito para Iniciantes</p>
+    <h1>Aprenda Lógica de Programação</h1>
+    <p>Projeto Educativo Gratuito para Iniciantes</p>
 </header>
 
 <nav>
-<a href="#logica">Lógica</a>
-<a href="#algoritmos">Algoritmos</a>
-<a href="#variaveis">Variáveis</a>
-<a href="#condicionais">Condicionais</a>
-<a href="#repeticao">Repetição</a>
-<a href="#quiz">Quiz</a>
+    <a href="#logica">Lógica</a>
+    <a href="#algoritmos">Algoritmos</a>
+    <a href="#variaveis">Variáveis</a>
+    <a href="#condicionais">Condicionais</a>
+    <a href="#repeticao">Repetição</a>
+    <a href="#exercicios">Exercícios</a>
+    <a href="#quiz">Quiz</a>
+    <a href="#feedback">Feedback</a>
 </nav>
 
 <section id="logica">
 
 <div class="card">
+
 <h2>O que é Lógica de Programação?</h2>
 
 <p>
-Lógica de programação é a forma de organizar pensamentos e instruções
-para resolver problemas utilizando computadores.
+Lógica de programação é a técnica utilizada para criar soluções
+de forma organizada e sequencial, permitindo que computadores
+executem tarefas corretamente.
 </p>
 
 <p>
-Antes de aprender qualquer linguagem de programação, é importante
-entender como criar soluções passo a passo.
+Ela é a base para aprender qualquer linguagem de programação.
 </p>
+
 </div>
 
 </section>
@@ -141,17 +157,19 @@ entender como criar soluções passo a passo.
 <section id="algoritmos">
 
 <div class="card">
+
 <h2>Algoritmos</h2>
 
 <p>
-Um algoritmo é uma sequência de passos utilizada para resolver um problema.
+Um algoritmo é uma sequência de passos utilizada para resolver
+um problema ou executar uma tarefa.
 </p>
 
 <code>
-1. Pegar café<br>
-2. Adicionar açúcar<br>
-3. Misturar<br>
-4. Beber
+1. Ligar a cafeteira<br>
+2. Colocar café<br>
+3. Adicionar água<br>
+4. Preparar café
 </code>
 
 </div>
@@ -165,7 +183,8 @@ Um algoritmo é uma sequência de passos utilizada para resolver um problema.
 <h2>Variáveis</h2>
 
 <p>
-Variáveis são espaços utilizados para armazenar informações.
+Variáveis armazenam informações que podem ser utilizadas
+durante a execução de um programa.
 </p>
 
 <code>
@@ -185,17 +204,17 @@ idade = 20
 <h2>Estruturas Condicionais</h2>
 
 <p>
-Permitem que o programa tome decisões.
+As condicionais permitem que o programa tome decisões.
 </p>
 
 <code>
 SE idade >= 18
 
-   Mostrar "Maior de idade"
+    Mostrar "Maior de idade"
 
 SENÃO
 
-   Mostrar "Menor de idade"
+    Mostrar "Menor de idade"
 </code>
 
 </div>
@@ -209,14 +228,56 @@ SENÃO
 <h2>Laços de Repetição</h2>
 
 <p>
-Permitem executar uma tarefa várias vezes.
+Permitem executar uma mesma ação várias vezes.
 </p>
 
 <code>
 PARA contador de 1 até 5
 
-   Mostrar contador
+    Mostrar contador
 </code>
+
+</div>
+
+</section>
+
+<section id="exercicios">
+
+<div class="card">
+
+<h2>Exercícios Interativos</h2>
+
+<h3>Exercício 1</h3>
+
+<p>Qual estrutura é usada para tomar decisões?</p>
+
+<select id="ex1">
+<option value="">Selecione</option>
+<option value="errado">Variável</option>
+<option value="certo">Condicional (IF)</option>
+<option value="errado">Comentário</option>
+</select>
+
+<button onclick="corrigirEx1()">Verificar</button>
+
+<p id="resp1" class="resultado"></p>
+
+<hr><br>
+
+<h3>Exercício 2</h3>
+
+<p>Qual é a função de uma variável?</p>
+
+<select id="ex2">
+<option value="">Selecione</option>
+<option value="certo">Armazenar dados</option>
+<option value="errado">Desligar o computador</option>
+<option value="errado">Criar internet</option>
+</select>
+
+<button onclick="corrigirEx2()">Verificar</button>
+
+<p id="resp2" class="resultado"></p>
 
 </div>
 
@@ -224,24 +285,30 @@ PARA contador de 1 até 5
 
 <section id="quiz">
 
-<div class="quiz">
+<div class="card">
 
-<h2>Quiz de Conhecimento</h2>
+<h2>Quiz Final</h2>
 
 <p>O que é um algoritmo?</p>
 
-<input type="radio" name="q1" value="certo">
+<label>
+<input type="radio" name="quiz" value="certo">
 Uma sequência de passos para resolver um problema
+</label>
 
 <br><br>
 
-<input type="radio" name="q1" value="errado">
+<label>
+<input type="radio" name="quiz" value="errado">
 Um componente físico do computador
+</label>
 
 <br><br>
 
-<input type="radio" name="q1" value="errado">
+<label>
+<input type="radio" name="quiz" value="errado">
 Um tipo de memória RAM
+</label>
 
 <br>
 
@@ -249,7 +316,7 @@ Um tipo de memória RAM
 Verificar Resposta
 </button>
 
-<div id="resultado"></div>
+<p id="resultadoQuiz" class="resultado"></p>
 
 </div>
 
@@ -261,11 +328,61 @@ Verificar Resposta
 
 <h2>Sobre o Projeto</h2>
 
+<p><strong>Aluno:</strong> SEU NOME COMPLETO</p>
+
+<p><strong>RA:</strong> SEU RA</p>
+
+<p><strong>Curso:</strong> CST em Análise e Desenvolvimento de Sistemas</p>
+
+<br>
+
 <p>
-Este site foi desenvolvido como atividade extensionista do curso
-de Análise e Desenvolvimento de Sistemas com o objetivo de disseminar
-conhecimentos básicos de programação para a comunidade.
+Este site foi desenvolvido como atividade extensionista do
+Projeto de Extensão I, com o objetivo de disseminar
+conhecimentos básicos sobre lógica de programação para
+a comunidade.
 </p>
+
+<p>
+A iniciativa está alinhada ao ODS 4 da ONU
+(Educação de Qualidade), promovendo acesso gratuito
+ao aprendizado de tecnologia.
+</p>
+
+</div>
+
+</section>
+
+<section id="feedback">
+
+<div class="card">
+
+<h2>Feedback dos Visitantes</h2>
+
+<form>
+
+<label>Nome:</label>
+<input type="text">
+
+<label>O conteúdo foi útil?</label>
+
+<select>
+<option>Muito útil</option>
+<option>Útil</option>
+<option>Pouco útil</option>
+</select>
+
+<label>Sugestões:</label>
+
+<textarea rows="5"></textarea>
+
+<button type="button" onclick="enviarFeedback()">
+Enviar Feedback
+</button>
+
+</form>
+
+<p id="mensagemFeedback" class="resultado"></p>
 
 </div>
 
@@ -274,36 +391,73 @@ conhecimentos básicos de programação para a comunidade.
 <footer>
 
 <p>
-Projeto de Extensão I - CST em Análise e Desenvolvimento de Sistemas
+Projeto de Extensão I - Análise e Desenvolvimento de Sistemas
 </p>
 
 </footer>
 
 <script>
 
+function corrigirEx1(){
+
+let valor =
+document.getElementById("ex1").value;
+
+if(valor === "certo"){
+document.getElementById("resp1").innerHTML =
+"✅ Resposta correta!";
+}else{
+document.getElementById("resp1").innerHTML =
+"❌ Resposta incorreta.";
+}
+
+}
+
+function corrigirEx2(){
+
+let valor =
+document.getElementById("ex2").value;
+
+if(valor === "certo"){
+document.getElementById("resp2").innerHTML =
+"✅ Resposta correta!";
+}else{
+document.getElementById("resp2").innerHTML =
+"❌ Resposta incorreta.";
+}
+
+}
+
 function corrigirQuiz(){
 
 let resposta =
-document.querySelector('input[name="q1"]:checked');
+document.querySelector('input[name="quiz"]:checked');
 
 if(!resposta){
 
-document.getElementById("resultado").innerHTML =
-"Selecione uma resposta.";
+document.getElementById("resultadoQuiz").innerHTML =
+"⚠️ Selecione uma alternativa.";
 
 return;
 }
 
 if(resposta.value === "certo"){
 
-document.getElementById("resultado").innerHTML =
-"✅ Parabéns! Resposta correta.";
+document.getElementById("resultadoQuiz").innerHTML =
+"🎉 Parabéns! Você acertou.";
 
 }else{
 
-document.getElementById("resultado").innerHTML =
+document.getElementById("resultadoQuiz").innerHTML =
 "❌ Resposta incorreta.";
 }
+
+}
+
+function enviarFeedback(){
+
+document.getElementById("mensagemFeedback").innerHTML =
+"✅ Obrigado pelo seu feedback!";
 
 }
 
