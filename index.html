@@ -122,7 +122,7 @@ code{
     display:block;
     background:#0f172a;
     color:#f8fafc;
-    padding:15px;
+    padding:10px;
     border-radius:10px;
     margin-top:10px;
     white-space:pre-line;
@@ -281,15 +281,30 @@ Um algoritmo é uma sequência de passos organizados que resolve um problema ou 
 <h2>📦 Variáveis</h2>
 
 <p>
-Variáveis armazenam informações que podem ser utilizadas
-durante a execução de um programa.
+Variáveis são “espaços” na memória do computador usados para guardar informações que podem ser usadas ou alteradas durante a execução de um programa.
+Elas funcionam como uma caixa onde armazenamos dados, como números, textos ou valores lógicos. Cada variável tem um nome, que serve para identificar o que está sendo guardado.
+Por exemplo, em um sistema de cadastro, podemos ter uma variável chamada “nome” para guardar o nome de uma pessoa, outra chamada “idade” para guardar sua idade, e assim por diante.
+Esses valores podem mudar ao longo do programa, por isso são chamados de variáveis.
+
 </p>
 
 <code>
+Exemplo simples:
+    
 nome = "João"
-
 idade = 20
+
+Se depois a idade mudar, a variável pode ser atualizada:
+
+idade = 21
 </code>
+
+<p>
+Na programação, as variáveis são essenciais porque permitem armazenar e manipular informações de forma dinâmica.
+    
+Resumindo:
+Variáveis são locais na memória do computador que armazenam dados que podem ser utilizados e alterados durante a execução de um programa.
+<p>
 
 </div>
 
@@ -302,19 +317,31 @@ idade = 20
 <h2>🔀 Estruturas Condicionais</h2>
 
 <p>
-As condicionais permitem que o programa tome decisões.
+Estruturas condicionais são recursos da programação que permitem que o computador tome decisões com base em condições.
+Elas funcionam como perguntas que têm respostas diferentes: se uma condição for verdadeira, o programa executa uma ação; se for falsa, executa outra.
+No dia a dia, usamos esse tipo de lógica o tempo todo. Por exemplo:
+“Se estiver chovendo, levo guarda-chuva; se não estiver, saio sem ele.”
+Na programação, isso é feito com estruturas como “if” (se) e “else” (senão).
 </p>
 
 <code>
-SE idade >= 18
-
-    Mostrar "Maior de idade"
-
-SENÃO
-
-    Mostrar "Menor de idade"
+Exemplo simples:
+    
+Se a idade for maior ou igual a 18 → pode acessar o sistema
+    
+Senão → acesso negado
+    
+Exemplo em lógica:
+    
+Se condição for verdadeira → executa um bloco de código
+    
+Senão → executa outro bloco de código
 </code>
-
+<p>
+Essas estruturas são muito importantes porque permitem que os programas tomem decisões e se comportem de formas diferentes dependendo das situações.
+Resumindo:
+Estruturas condicionais são comandos que permitem ao programa tomar decisões com base em condições, escolhendo diferentes caminhos de execução.
+</p>
 </div>
 
 </section>
@@ -326,14 +353,29 @@ SENÃO
 <h2>🔁 Laços de Repetição</h2>
 
 <p>
-Permitem executar uma mesma ação várias vezes.
+Laços de repetição são estruturas da programação usadas para repetir um conjunto de instruções várias vezes, sem precisar escrever o mesmo código repetidamente.
+Eles são muito úteis quando precisamos executar uma tarefa de forma automática enquanto uma condição for verdadeira ou por um número específico de vezes.
+No dia a dia, isso acontece de forma parecida quando realizamos ações repetidas. Por exemplo: “enquanto não terminar a lição, continue estudando”.
+Na programação, isso é feito com estruturas como for (para) e while (enquanto).
 </p>
 
 <code>
-PARA contador de 1 até 5
+Exemplo simples:
 
-    Mostrar contador
+Se você quer contar de 1 até 5:
+
+O programa pode repetir a ação de somar 1 até chegar no número 5.
+Outro exemplo:
+Enquanto houver produtos no carrinho → continuar somando os valores
+Quando não houver mais produtos → parar a repetição
+
+Esses laços ajudam a deixar o código mais organizado, eficiente e evitam repetições desnecessárias.
 </code>
+
+<p>
+Resumindo:
+Laços de repetição são estruturas que permitem repetir comandos várias vezes, até que uma condição seja atendida ou um limite seja alcançado.
+</p>
 
 </div>
 
