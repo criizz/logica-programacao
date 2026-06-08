@@ -4,7 +4,23 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Lógica de Programação para Iniciantes</title>
+<title>Aprenda Lógica de Programação | Projeto Educativo</title>
+
+hr{
+    border:none;
+    height:1px;
+    background:#e5e7eb;
+    margin:25px 0;
+}
+
+h3{
+    color:#1e3a8a;
+    margin-bottom:10px;
+}
+
+.card p{
+    margin-bottom:10px;
+}
 
 <style>
 
@@ -12,6 +28,10 @@
     margin:0;
     padding:0;
     box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
 }
 
 body{
@@ -22,10 +42,10 @@ body{
 }
 
 header{
-    background:#1e3a8a;
+    background:linear-gradient(135deg,#1e3a8a,#2563eb);
     color:white;
     text-align:center;
-    padding:50px 20px;
+    padding:70px 20px;
 }
 
 header h1{
@@ -53,17 +73,22 @@ nav a:hover{
 }
 
 section{
-    max-width:1000px;
+    max-width:900px;
     margin:auto;
     padding:30px 20px;
 }
 
 .card{
     background:white;
-    padding:25px;
+    padding:30px;
     margin-bottom:25px;
-    border-radius:12px;
-    box-shadow:0 2px 8px rgba(0,0,0,0.1);
+    border-radius:16px;
+    box-shadow:0 8px 20px rgba(0,0,0,0.08);
+    transition:.3s;
+}
+
+.card:hover{
+    transform:translateY(-4px);
 }
 
 h2{
@@ -73,9 +98,10 @@ h2{
 
 code{
     display:block;
-    background:#eee;
+    background:#0f172a;
+    color:#f8fafc;
     padding:15px;
-    border-radius:8px;
+    border-radius:10px;
     margin-top:10px;
 }
 
@@ -83,17 +109,21 @@ button{
     background:#2563eb;
     color:white;
     border:none;
-    padding:10px 20px;
-    border-radius:5px;
+    padding:12px 24px;
+    border-radius:8px;
     cursor:pointer;
     margin-top:10px;
+    transition:.3s;
 }
 
 button:hover{
     background:#1d4ed8;
+    transform:scale(1.05);
 }
 
-input, select, textarea{
+input[type="text"],
+select,
+textarea{
     width:100%;
     padding:10px;
     margin-top:5px;
@@ -101,11 +131,27 @@ input, select, textarea{
     border-radius:5px;
 }
 
+.quiz-option{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    margin:15px 0;
+}
+
+.quiz-option input{
+    width:auto;
+    margin:0;
+}
+
+.lista-beneficios li{
+    margin-bottom:10px;
+}
+
 footer{
     background:#1e3a8a;
     color:white;
     text-align:center;
-    padding:20px;
+    padding:30px;
 }
 
 .resultado{
@@ -138,7 +184,7 @@ footer{
 
 <div class="card">
 
-<h2>O que é Lógica de Programação?</h2>
+<h2>💡 O que é Lógica de Programação?</h2>
 
 <p>
 Lógica de programação é a técnica utilizada para criar soluções
@@ -158,7 +204,7 @@ Ela é a base para aprender qualquer linguagem de programação.
 
 <div class="card">
 
-<h2>Algoritmos</h2>
+<h2>📋 Algoritmos</h2>
 
 <p>
 Um algoritmo é uma sequência de passos utilizada para resolver
@@ -180,7 +226,7 @@ um problema ou executar uma tarefa.
 
 <div class="card">
 
-<h2>Variáveis</h2>
+<h2>📦 Variáveis</h2>
 
 <p>
 Variáveis armazenam informações que podem ser utilizadas
@@ -201,7 +247,7 @@ idade = 20
 
 <div class="card">
 
-<h2>Estruturas Condicionais</h2>
+<h2>🔀 Estruturas Condicionais</h2>
 
 <p>
 As condicionais permitem que o programa tome decisões.
@@ -225,7 +271,7 @@ SENÃO
 
 <div class="card">
 
-<h2>Laços de Repetição</h2>
+<h2>🔁 Laços de Repetição</h2>
 
 <p>
 Permitem executar uma mesma ação várias vezes.
@@ -245,7 +291,7 @@ PARA contador de 1 até 5
 
 <div class="card">
 
-<h2>Exercícios Interativos</h2>
+<h2>📝 Exercícios Interativos</h2>
 
 <h3>Exercício 1</h3>
 
@@ -287,27 +333,23 @@ PARA contador de 1 até 5
 
 <div class="card">
 
-<h2>Quiz Final</h2>
+<h2>🏆 Quiz Final</h2>
 
 <p>O que é um algoritmo?</p>
 
-<label>
+<label class="quiz-option">
 <input type="radio" name="quiz" value="certo">
-Uma sequência de passos para resolver um problema
+<span>Uma sequência de passos para resolver um problema</span>
 </label>
 
-<br><br>
-
-<label>
+<label class="quiz-option">
 <input type="radio" name="quiz" value="errado">
-Um componente físico do computador
+<span>Um componente físico do computador</span>
 </label>
 
-<br><br>
-
-<label>
+<label class="quiz-option">
 <input type="radio" name="quiz" value="errado">
-Um tipo de memória RAM
+<span>Um tipo de memória RAM</span>
 </label>
 
 <br>
@@ -326,13 +368,53 @@ Verificar Resposta
 
 <div class="card">
 
-<h2>Sobre o Projeto</h2>
+<section>
+
+<div class="card">
+
+<h2>📊 Benefícios da Programação</h2>
+
+<ul class="lista-beneficios">
+<li>✔ Desenvolve o raciocínio lógico</li>
+<li>✔ Melhora a resolução de problemas</li>
+<li>✔ Estimula a criatividade</li>
+<li>✔ Prepara para carreiras na tecnologia</li>
+<li>✔ Auxilia na automação de tarefas</li>
+</ul>
+
+</div>
+
+</section>
+
+<section>
+
+<div class="card">
+
+<h2>🎓 Certificado Simbólico</h2>
+
+<p>
+Ao concluir os exercícios e o quiz deste site,
+o participante demonstra conhecimentos básicos
+sobre lógica de programação e algoritmos.
+</p>
+
+</div>
+
+</section>
+
+<section>
+
+<div class="card">
+
+<h2>📚 Sobre o Projeto</h2>
 
 <p><strong>Aluno:</strong> SEU NOME COMPLETO</p>
 
 <p><strong>RA:</strong> SEU RA</p>
 
 <p><strong>Curso:</strong> CST em Análise e Desenvolvimento de Sistemas</p>
+
+<p><strong>ODS:</strong> ODS 4 - Educação de Qualidade</p>
 
 <br>
 
@@ -357,7 +439,7 @@ ao aprendizado de tecnologia.
 
 <div class="card">
 
-<h2>Feedback dos Visitantes</h2>
+<h2>⭐ Feedback dos Visitantes</h2>
 
 <form>
 
@@ -390,9 +472,13 @@ Enviar Feedback
 
 <footer>
 
-<p>
-Projeto de Extensão I - Análise e Desenvolvimento de Sistemas
-</p>
+<h3>Projeto de Extensão I</h3>
+
+<p>CST em Análise e Desenvolvimento de Sistemas</p>
+
+<p>ODS 4 - Educação de Qualidade</p>
+
+<p>Site Educativo de Lógica de Programação</p>
 
 </footer>
 
