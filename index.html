@@ -5,7 +5,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Aprenda Lógica de Programação | Projeto Educativo</title>
-
+    
+<style>
 hr{
     border:none;
     height:1px;
@@ -21,8 +22,6 @@ h3{
 .card p{
     margin-bottom:10px;
 }
-
-<style>
 
 *{
     margin:0;
@@ -212,7 +211,7 @@ um problema ou executar uma tarefa.
 </p>
 
 <p>
-Exemplo: Como fazer café:
+Exemplo: Preparando café
 </p>
 
 
@@ -328,7 +327,24 @@ PARA contador de 1 até 5
 
 <button onclick="corrigirEx2()">Verificar</button>
 
-<p id="resp2" class="resultado"></p>
+<p id="resp2" class="resultado"></p> 
+
+<hr><br>
+
+<h3>Exercício 3</h3>
+
+<p>Qual estrutura é usada para repetir ações várias vezes?</p>
+
+<select id="ex3">
+<option value="">Selecione</option>
+<option value="errado">Variável</option>
+<option value="certo">Laço de Repetição</option>
+<option value="errado">Comentário</option>
+</select>
+
+<button onclick="corrigirEx3()">Verificar</button>
+
+<p id="resp3" class="resultado"></p>
 
 </div>
 
@@ -368,10 +384,6 @@ Verificar Resposta
 </div>
 
 </section>
-
-<section>
-
-<div class="card">
 
 <section>
 
@@ -421,7 +433,7 @@ sobre lógica de programação e algoritmos.
 
 <p><strong>ODS:</strong> ODS 4 - Educação de Qualidade</p>
 
-<br>
+<p><strong>Ano:</strong> 2026</p>
 
 <p>
 Este site foi desenvolvido como atividade extensionista do
@@ -514,6 +526,21 @@ document.getElementById("resp2").innerHTML =
 "✅ Resposta correta!";
 }else{
 document.getElementById("resp2").innerHTML =
+"❌ Resposta incorreta.";
+}
+
+}
+
+function corrigirEx3(){
+
+let valor =
+document.getElementById("ex3").value;
+
+if(valor === "certo"){
+document.getElementById("resp3").innerHTML =
+"✅ Resposta correta!";
+}else{
+document.getElementById("resp3").innerHTML =
 "❌ Resposta incorreta.";
 }
 
