@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lógica de Programação para Iniciantes</title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial, sans-serif;
+}
+
+body{
+background:#f5f7fa;
+line-height:1.6;
+}
+
+header{
+background:#1e3a8a;
+color:white;
+padding:40px;
+text-align:center;
+}
+
+nav{
+background:#172554;
+padding:15px;
+text-align:center;
+position:sticky;
+top:0;
+}
+
+nav a{
+color:white;
+text-decoration:none;
+margin:0 15px;
+font-weight:bold;
+}
+
+section{
+max-width:1000px;
+margin:auto;
+padding:40px 20px;
+}
+
+.card{
+background:white;
+padding:25px;
+margin-bottom:25px;
+border-radius:10px;
+box-shadow:0 2px 8px rgba(0,0,0,0.1);
+}
+
+h2{
+color:#1e3a8a;
+margin-bottom:15px;
+}
+
+code{
+display:block;
+background:#eee;
+padding:10px;
+margin-top:10px;
+border-radius:5px;
+}
+
+.quiz{
+background:white;
+padding:20px;
+border-radius:10px;
+}
+
+button{
+background:#2563eb;
+color:white;
+border:none;
+padding:10px 20px;
+border-radius:5px;
+cursor:pointer;
+margin-top:15px;
+}
+
+button:hover{
+opacity:0.9;
+}
+
+footer{
+background:#1e3a8a;
+color:white;
+text-align:center;
+padding:20px;
+margin-top:30px;
+}
+
+#resultado{
+font-weight:bold;
+margin-top:15px;
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+<h1>Aprenda Lógica de Programação</h1>
+<p>Projeto Educativo Gratuito para Iniciantes</p>
+</header>
+
+<nav>
+<a href="#logica">Lógica</a>
+<a href="#algoritmos">Algoritmos</a>
+<a href="#variaveis">Variáveis</a>
+<a href="#condicionais">Condicionais</a>
+<a href="#repeticao">Repetição</a>
+<a href="#quiz">Quiz</a>
+</nav>
+
+<section id="logica">
+
+<div class="card">
+<h2>O que é Lógica de Programação?</h2>
+
+<p>
+Lógica de programação é a forma de organizar pensamentos e instruções
+para resolver problemas utilizando computadores.
+</p>
+
+<p>
+Antes de aprender qualquer linguagem de programação, é importante
+entender como criar soluções passo a passo.
+</p>
+</div>
+
+</section>
+
+<section id="algoritmos">
+
+<div class="card">
+<h2>Algoritmos</h2>
+
+<p>
+Um algoritmo é uma sequência de passos utilizada para resolver um problema.
+</p>
+
+<code>
+1. Pegar café<br>
+2. Adicionar açúcar<br>
+3. Misturar<br>
+4. Beber
+</code>
+
+</div>
+
+</section>
+
+<section id="variaveis">
+
+<div class="card">
+
+<h2>Variáveis</h2>
+
+<p>
+Variáveis são espaços utilizados para armazenar informações.
+</p>
+
+<code>
+nome = "João"
+
+idade = 20
+</code>
+
+</div>
+
+</section>
+
+<section id="condicionais">
+
+<div class="card">
+
+<h2>Estruturas Condicionais</h2>
+
+<p>
+Permitem que o programa tome decisões.
+</p>
+
+<code>
+SE idade >= 18
+
+   Mostrar "Maior de idade"
+
+SENÃO
+
+   Mostrar "Menor de idade"
+</code>
+
+</div>
+
+</section>
+
+<section id="repeticao">
+
+<div class="card">
+
+<h2>Laços de Repetição</h2>
+
+<p>
+Permitem executar uma tarefa várias vezes.
+</p>
+
+<code>
+PARA contador de 1 até 5
+
+   Mostrar contador
+</code>
+
+</div>
+
+</section>
+
+<section id="quiz">
+
+<div class="quiz">
+
+<h2>Quiz de Conhecimento</h2>
+
+<p>O que é um algoritmo?</p>
+
+<input type="radio" name="q1" value="certo">
+Uma sequência de passos para resolver um problema
+
+<br><br>
+
+<input type="radio" name="q1" value="errado">
+Um componente físico do computador
+
+<br><br>
+
+<input type="radio" name="q1" value="errado">
+Um tipo de memória RAM
+
+<br>
+
+<button onclick="corrigirQuiz()">
+Verificar Resposta
+</button>
+
+<div id="resultado"></div>
+
+</div>
+
+</section>
+
+<section>
+
+<div class="card">
+
+<h2>Sobre o Projeto</h2>
+
+<p>
+Este site foi desenvolvido como atividade extensionista do curso
+de Análise e Desenvolvimento de Sistemas com o objetivo de disseminar
+conhecimentos básicos de programação para a comunidade.
+</p>
+
+</div>
+
+</section>
+
+<footer>
+
+<p>
+Projeto de Extensão I - CST em Análise e Desenvolvimento de Sistemas
+</p>
+
+</footer>
+
+<script>
+
+function corrigirQuiz(){
+
+let resposta =
+document.querySelector('input[name="q1"]:checked');
+
+if(!resposta){
+
+document.getElementById("resultado").innerHTML =
+"Selecione uma resposta.";
+
+return;
+}
+
+if(resposta.value === "certo"){
+
+document.getElementById("resultado").innerHTML =
+"✅ Parabéns! Resposta correta.";
+
+}else{
+
+document.getElementById("resultado").innerHTML =
+"❌ Resposta incorreta.";
+}
+
+}
+
+</script>
+
+</body>
+</html>
