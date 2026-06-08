@@ -182,6 +182,21 @@ footer{
     font-weight:bold;
 }
 
+.botao-feedback{
+    display:inline-block;
+    background:#2563eb;
+    color:white;
+    text-decoration:none;
+    padding:12px 24px;
+    border-radius:8px;
+    transition:.3s;
+}
+
+.botao-feedback:hover{
+    background:#1d4ed8;
+    transform:scale(1.05);
+}
+
 </style>
 </head>
 
@@ -240,9 +255,9 @@ Exemplo: Preparando café
 
 
 <code>
-1. Ligar a cafeteira<br>
-2. Colocar café<br>
-3. Adicionar água<br>
+1. Ligar a cafeteira
+2. Colocar café
+3. Adicionar água
 4. Preparar café
 </code>
 
@@ -449,8 +464,8 @@ sobre lógica de programação e algoritmos.
 
 <h2>📚 Sobre o Projeto</h2>
 
-<p><strong>Aluno:</strong> SEU NOME COMPLETO</p>
-<p><strong>RA:</strong> SEU RA</p>
+<p><strong>Aluno:</strong> Cristian Castro</p>
+<p><strong>RA:</strong> RA:2025357272</p>
 <p><strong>Curso:</strong> CST em Análise e Desenvolvimento de Sistemas</p>
 <p><strong>ODS:</strong> ODS 4 - Educação de Qualidade</p>
 <p><strong>Ano:</strong> 2026</p>
@@ -499,35 +514,22 @@ Após aprender lógica de programação, você pode estudar:
 
 <h2>⭐ Feedback dos Visitantes</h2>
 
-<form>
+<p>
+Sua opinião é importante para melhorar este projeto.
+</p>
 
-<label>Nome:</label>
-<input type="text">
+<a href="https://docs.google.com/forms/d/e/1FAIpQLSdIfh3I7P0GYgl933vH1IqvTkf_DDC7WoTDDRYTAqjxz3rYsQ/viewform"
+   target="_blank"
+   class="botao-feedback">
 
-<label>O conteúdo foi útil?</label>
+Preencher Formulário de Feedback
 
-<select>
-<option>Muito útil</option>
-<option>Útil</option>
-<option>Pouco útil</option>
-</select>
-
-<label>Sugestões:</label>
-
-<textarea rows="5"></textarea>
-
-<button type="button" onclick="enviarFeedback()">
-Enviar Feedback
-</button>
-
-</form>
-
-<p id="mensagemFeedback" class="resultado"></p>
+</a>
 
 </div>
 
 </section>
-
+    
 <footer>
 
 <h3>Projeto de Extensão I</h3>
@@ -611,14 +613,7 @@ document.getElementById("resultadoQuiz").innerHTML =
 "❌ Resposta incorreta.";
 }
 
-}
-
-function enviarFeedback(){
-
-document.getElementById("mensagemFeedback").innerHTML =
-"✅ Obrigado pelo seu feedback!";
-
-}
+} // Fecha a função corrigirQuiz
 
 </script>
 
